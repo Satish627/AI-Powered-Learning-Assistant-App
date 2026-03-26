@@ -1,10 +1,11 @@
 ---
 phase: 02
 slug: documents-and-reader
-status: draft
+status: approved
 shadcn_initialized: true
 preset: new-york
 created: 2026-03-27
+reviewed_at: 2026-03-27T00:28:35+01:00
 ---
 
 # Phase 02 — UI Design Contract
@@ -178,4 +179,4 @@ Do not remove non-ready documents from the library. Newest uploads stay first so
 - [ ] Dimension 5 Spacing: PASS
 - [ ] Dimension 6 Registry Safety: PASS
 
-**Approval:** pending
+**Approval:** approved 2026-03-27

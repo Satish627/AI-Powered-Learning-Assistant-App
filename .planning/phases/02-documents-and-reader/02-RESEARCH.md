@@ -430,14 +430,14 @@ export function Reader({ file }: { file: string }) {
 |----------|-------|
 | Framework | `Vitest 2.1.9` in `backend/` only |
 | Config file | `backend/vitest.config.ts` |
-| Quick run command | `npm --prefix backend test -- src/modules/documents/document.service.test.ts` |
+| Quick run command | `npm --prefix backend test -- src/modules/documents/documents.service.test.ts` |
 | Full suite command | `npm --prefix backend test` |
 
 ### Phase Requirements -> Test Map
 | Req ID | Behavior | Test Type | Automated Command | File Exists? |
 |--------|----------|-----------|-------------------|-------------|
 | DOC-01 | Initialize upload session, enforce PDF-only validation, create owner-scoped record | integration | `npm --prefix backend test -- src/modules/documents/documents.routes.test.ts -t "initializes a PDF upload"` | ❌ Wave 0 |
-| DOC-02 | Persist title, size, upload date, and lifecycle status | unit | `npm --prefix backend test -- src/modules/documents/document.service.test.ts -t "persists metadata and status"` | ❌ Wave 0 |
+| DOC-02 | Persist title, size, upload date, and lifecycle status | unit | `npm --prefix backend test -- src/modules/documents/documents.service.test.ts -t "persists metadata and status"` | ❌ Wave 0 |
 | DOC-03 | List only the signed-in user's documents in newest-first order | integration | `npm --prefix backend test -- src/modules/documents/documents.routes.test.ts -t "lists only owner documents"` | ❌ Wave 0 |
 | DOC-04 | Mint viewer access only for `ready` owner documents | integration | `npm --prefix backend test -- src/modules/documents/documents.routes.test.ts -t "returns a read URL only for ready docs"` | ❌ Wave 0 |
 | DOC-05 | Delete stored object plus metadata for owner docs | integration | `npm --prefix backend test -- src/modules/documents/documents.routes.test.ts -t "deletes storage and metadata"` | ❌ Wave 0 |
@@ -446,12 +446,12 @@ export function Reader({ file }: { file: string }) {
 | READ-03 | Reader layout keeps document context and future AI panel in the same workflow | manual-only | — browser smoke required | ❌ Wave 0 |
 
 ### Sampling Rate
-- **Per task commit:** `npm --prefix backend test -- src/modules/documents/document.service.test.ts`
+- **Per task commit:** `npm --prefix backend test -- src/modules/documents/documents.service.test.ts`
 - **Per wave merge:** `npm --prefix backend test`
 - **Phase gate:** Backend suite green plus manual browser verification of upload, library, open, page navigation, and delete
 
 ### Wave 0 Gaps
-- [ ] `backend/src/modules/documents/document.service.test.ts` — covers lifecycle transitions and storage adapter coordination
+- [ ] `backend/src/modules/documents/documents.service.test.ts` — covers lifecycle transitions and storage adapter coordination
 - [ ] `backend/src/modules/documents/documents.routes.test.ts` — covers auth, ownership, and route contracts
 - [ ] Backend test dependency: `npm --prefix backend install -D supertest`
 - [ ] Frontend browser automation is absent — either add Playwright for reader smoke tests or keep READ-* manual for this phase

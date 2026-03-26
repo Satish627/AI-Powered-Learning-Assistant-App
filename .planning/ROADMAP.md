@@ -46,12 +46,13 @@ Plans:
   2. User can browse their library, open a document, and delete a document they own.
   3. User can read the PDF inside the app and navigate between pages.
   4. The document workspace is ready for later AI actions rather than being a disconnected viewer.
-**Plans**: 3 plans
+**Plans**: 4 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Implement document storage, lifecycle records, and secure upload/list/open/delete APIs
-- [ ] 02-02-PLAN.md — Build the authenticated library route, upload UX, status cards, and delete confirmation flow
-- [ ] 02-03-PLAN.md — Add the reader workspace, embedded PDF viewer, and final browser verification checkpoint
+- [ ] 02-01-PLAN.md — Establish backend storage/env contracts, document schema, and PDF/storage helpers
+- [ ] 02-02-PLAN.md — Implement the backend lifecycle API, async finalize flow, and backend tests
+- [ ] 02-03-PLAN.md — Build the authenticated library route, upload UX, visible processing-state polling, and delete confirmation flow
+- [ ] 02-04-PLAN.md — Add the reader workspace, embedded PDF viewer, and final browser verification checkpoint
 
 ### Phase 3: AI Document Intelligence
 **Goal**: Turn uploaded PDFs into grounded AI study surfaces using chunking, embeddings, retrieval, and Gemini generation.
