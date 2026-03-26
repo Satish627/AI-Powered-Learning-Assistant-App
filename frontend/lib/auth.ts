@@ -46,11 +46,22 @@ export async function getCurrentUser() {
 export async function getCurrentUserServer() {
   try {
     const { cookies } = await import("next/headers");
+    const { headers } = await import("next/headers");
     const cookieStore = await cookies();
+    const headerStore = await headers();
+    const forwardedProto = headerStore.get("x-forwarded-proto") ?? "http";
+    const forwardedHost = headerStore.get("x-forwarded-host") ?? headerStore.get("host");
+    const appOrigin = forwardedHost
+      ? `${forwardedProto}://${forwardedHost}`
+      : process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3000";
+    const apiOrigin = process.env.BACKEND_ORIGIN
+      ? appOrigin
+      : process.env.NEXT_PUBLIC_API_URL ?? appOrigin;
     const response = await serverApiFetch<AuthResponse>(
       "/api/auth/me",
       { method: "GET" },
       cookieStore.toString(),
+      apiOrigin,
     );
 
     return response.user;

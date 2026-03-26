@@ -11,14 +11,15 @@ export class ApiError extends Error {
 }
 
 export function getApiBaseUrl() {
-  return process.env.NEXT_PUBLIC_API_URL ?? DEFAULT_API_URL;
+  return process.env.NEXT_PUBLIC_API_URL ?? "";
 }
 
 export async function apiFetch<T>(
   path: string,
   init: RequestInit = {},
 ): Promise<T> {
-  const response = await fetch(`${getApiBaseUrl()}${path}`, {
+  const baseUrl = getApiBaseUrl();
+  const response = await fetch(`${baseUrl}${path}`, {
     credentials: "include",
     ...init,
     headers: {
@@ -44,8 +45,10 @@ export async function serverApiFetch<T>(
   path: string,
   init: RequestInit = {},
   cookieHeader?: string,
+  baseUrl?: string,
 ): Promise<T> {
-  const response = await fetch(`${getApiBaseUrl()}${path}`, {
+  const resolvedBaseUrl = baseUrl ?? getApiBaseUrl() ?? DEFAULT_API_URL;
+  const response = await fetch(`${resolvedBaseUrl}${path}`, {
     ...init,
     cache: "no-store",
     headers: {

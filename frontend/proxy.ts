@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 const AUTH_COOKIE_NAME = "auth_token";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const hasAuthCookie = Boolean(request.cookies.get(AUTH_COOKIE_NAME)?.value);
 
