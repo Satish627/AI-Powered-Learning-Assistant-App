@@ -12,7 +12,7 @@ This roadmap takes the project from empty `frontend/` and `backend/` folders to 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation and Authentication** - Create the Next.js + shadcn/ui frontend base, Node/Express backend base, and secure JWT auth flow.
+- [x] **Phase 1: Foundation and Authentication** - Create the Next.js + shadcn/ui frontend base, Node/Express backend base, and secure JWT auth flow.
 - [ ] **Phase 2: Documents and Reader** - Build PDF upload, durable storage, document management, processing states, and embedded reading.
 - [ ] **Phase 3: AI Document Intelligence** - Add document-grounded chat, summaries, concept explanations, and retrieval infrastructure.
 - [ ] **Phase 4: Study Tools** - Generate flashcards and quizzes, persist results, and support favorites/review loops.
@@ -33,9 +33,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Scaffold `frontend/` and `backend/`, configure TypeScript/tooling, and establish shared conventions
-- [ ] 01-02: Implement backend auth, user model, JWT handling, and protected API middleware
-- [ ] 01-03: Build landing/auth screens, app shell, and protected route handling with shadcn/ui
+- [x] 01-01: Scaffold `frontend/` and `backend/`, configure TypeScript/tooling, and establish shared conventions
+- [x] 01-02: Implement backend auth, user model, JWT handling, and protected API middleware
+- [x] 01-03: Build landing/auth screens, app shell, and protected route handling with shadcn/ui
 
 ### Phase 2: Documents and Reader
 **Goal**: Make uploaded PDFs durable, visible, and usable through a library and in-app reading experience.
@@ -108,7 +108,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation and Authentication | 0/3 | Not started | - |
+| 1. Foundation and Authentication | 3/3 | Completed | 2026-03-26 |
 | 2. Documents and Reader | 0/3 | Not started | - |
 | 3. AI Document Intelligence | 0/3 | Not started | - |
 | 4. Study Tools | 0/3 | Not started | - |
