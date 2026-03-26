@@ -46,4 +46,11 @@ Preferred entry points:
 - `$gsd-plan-phase 1` to turn Phase 1 into an executable plan
 - `$gsd-execute-phase 1` after planning is approved
 
+Git workflow:
+
+- Use one git branch per phase before execution starts.
+- Branching strategy is configured as `phase`.
+- Phase branches use the template `gsd/phase-{phase}-{slug}`.
+- Merge phase branches manually after review or when the milestone workflow calls for it.
+
 Avoid making large direct edits without updating the planning artifacts when scope changes.

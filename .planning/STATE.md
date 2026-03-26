@@ -44,6 +44,7 @@ Recent decisions affecting current work:
 
 - [Initialization]: Use Next.js + Bun in `frontend/` and Node/Express in `backend/`
 - [Initialization]: Use Tailwind CSS with shadcn/ui as the frontend UI system
+- [Initialization]: Use one git branch per phase via GSD phase branching
 - [Initialization]: Keep v1 focused on single-user, single-document study flows
 
 ### Pending Todos

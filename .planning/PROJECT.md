@@ -48,6 +48,7 @@ The first release should focus on document-grounded learning from PDFs. General 
 - **Performance**: Core flows must feel fast — improving speed versus typical AI study apps is a primary product goal.
 - **UX quality**: Responsive, polished UI is a must-have — visual quality is part of the product differentiation, not a nice-to-have.
 - **Scope discipline**: v1 must stay focused on the single-user PDF study loop — defer collaboration and multi-document complexity.
+- **Git workflow**: Create a dedicated git branch before each phase starts — keep phase work isolated from the main working flow.
 
 ## Key Decisions
 
@@ -56,6 +57,7 @@ The first release should focus on document-grounded learning from PDFs. General 
 | Build the frontend as Next.js instead of a plain React client | Matches the desired app structure and gives a strong base for a modern public web product | — Pending |
 | Keep the repo split into `frontend/` and `backend/` directories | Clear separation of frontend and API concerns while staying in one repo | — Pending |
 | Use shadcn/ui as the frontend component base | Gives the app a stronger default UI foundation than ad hoc Tailwind-only implementation | — Pending |
+| Use one git branch per phase | Keeps each phase isolated and reduces workflow collisions while building incrementally | — Pending |
 | Make document-grounded PDF study the core workflow | This is the main value proposition and the core day-one user journey | — Pending |
 | Prioritize speed and visual quality as product differentiators | Existing AI learning tools often feel slow and ugly, which is the problem this product wants to fix | — Pending |
 | Defer team collaboration and multi-file chat out of v1 | They add complexity before the single-document learning loop is proven | — Pending |
