@@ -49,9 +49,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Implement document models, storage integration, and secure PDF upload endpoints
-- [ ] 02-02: Build document library, metadata views, and processing-state UX
-- [ ] 02-03: Add embedded PDF viewer and study workspace layout
+- [ ] 02-01-PLAN.md — Implement document storage, lifecycle records, and secure upload/list/open/delete APIs
+- [ ] 02-02-PLAN.md — Build the authenticated library route, upload UX, status cards, and delete confirmation flow
+- [ ] 02-03-PLAN.md — Add the reader workspace, embedded PDF viewer, and final browser verification checkpoint
 
 ### Phase 3: AI Document Intelligence
 **Goal**: Turn uploaded PDFs into grounded AI study surfaces using chunking, embeddings, retrieval, and Gemini generation.
