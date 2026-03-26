@@ -24,7 +24,7 @@ export function verifyAuthToken(token: string) {
 export function getAuthCookieOptions() {
   return {
     httpOnly: true,
-    sameSite: "lax" as const,
+    sameSite: env.NODE_ENV === "production" ? "none" : "lax",
     secure: env.NODE_ENV === "production",
     path: "/",
     maxAge: AUTH_TOKEN_MAX_AGE_MS,
